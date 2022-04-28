@@ -149,7 +149,7 @@ header .mobilMenu {display: none;}
 
 footer {padding: 100px 0;}
 footer a {position: relative;width: max-content;}
-footer a::before{content: "";position: absolute;left: 0;bottom: 0;width: 0;height: 0;border-bottom: 1px solid red;transition: 0.3s ease all;}
+footer a::before{content: "";position: absolute;left: 0;bottom: 0;width: 0;height: 0;border-bottom: 1px solid var(--primary-color);transition: 0.3s ease all;}
 footer a:hover::before{width: 100%;transition: 0.3s ease all;}
 footer ul{margin: 0;padding: 0;list-style: none;}
 footer .footer-top{display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;border-bottom: 1px solid #F4F4F4;padding-bottom: 40px;margin-bottom: 40px;}
