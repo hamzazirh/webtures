@@ -55,7 +55,33 @@ $(document).ready(function () {
     $('#videoModal .btn-close').click(function(){
         $('#videoModal .modal-body').html('')
     })
+    
+    $("header").on("click", ".mobilMenu", function () {
+        if ($(".menu.ac")[0]) {
+            $("body").removeClass("ovh");
+            $("header .menu.ac").removeClass("ac");
+            $("header .menu").addClass("kapa");
+        }
+        else {
+            $("body").addClass("ovh");
+            $("header .menu.kapa").removeClass("kapa");
+            $("header .menu").addClass("ac");
+        }
+    });
 
+    $("header .menu .dropdown a").click(function () {
+        $(this).parents(".dropdown").find("ul").slideToggle();
+    })
+
+    $("footer .box .b").click(function () {
+        if ($(this).parents(".box").hasClass("ac")) {
+            $(this).parents(".box").removeClass("ac")
+            $(this).parents(".box").find("ul").hide(400)
+        } else {
+            $(this).parents(".box").addClass("ac")
+            $(this).parents(".box").find("ul").show(400)
+        }
+    })
 
 
 })
